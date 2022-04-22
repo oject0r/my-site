@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&family=Montserrat:wght@200&display=swap');
+
+@keyframes descheadertotop {
+  0% { transform: translateY(0px); }
+  15% { transform: translateY(30px); }
+  30% { transform: translateY(75px); }
+  45% { transform: translateY(90px); }
+  60% { transform: translateY(105px); }
+  75% { transform: translateY(120px); }
+  90% { transform: translateY(150px); }
+  100% { transform: translateY(168px); }
+}
+
+@keyframes descheaderback {
+  0% { transform: translateY(168px); }
+  15% { transform: translateY(138px); }
+  30% { transform: translateY(108px); }
+  45% { transform: translateY(88px); }
+  60% { transform: translateY(78px); }
+  75% { transform: translateY(68px); }
+  90% { transform: translateY(28px); }
+  100% { transform: translateY(0px); }
+}
+
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: black;
+  color: white;
+  background: url('./bg.png') no-repeat;
+}
+
+/* Убираю закорючки */
+a {
+	text-decoration: none;
+}
+
+img {
+	text-decoration: none;
+	max-width: 100%;
+	height: auto;
+}
+
+/* Стили для классов. */
+
+.btn {
+  /* Стиль для кнопок */
+  display: flex;
+  align-items: center;
+  height: 45px;
+  width: auto;
+  border: 0;
+  background-color: white;
+  color:black;
+  padding-right: 20px;
+}
+
+.btns {
+  display: flex;
+  align-items: left;
+}
+
+/* Текст и его семья */
+
+.header {
+  display: flex;
+  font-size: 36px;
+  justify-content: center;
+  padding: 0;
+}
+.sub-header {
+  padding: 0;
+  display: flex;
+  font-size: 24px;
+  justify-content: center;
+}
+
+.description-header {
+  padding: 0;
+  margin: 0;
+  font-size: 30px;
+  color: white;
+  transition: 0.8s;
+}
+.smooth-append {
+    padding: 0;
+    margin: 0;
+    font-size: 24px;
+    color: rgb(92, 92, 92);
+    opacity: 0;
+    visibility: hidden;
+    transition: .55s opacity, .55s visibility;
+}
+
+.description-text {
+    color: rgb(92, 92, 92);
+}
+
+.description-header:hover ~ .smooth-append {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+
+.pr-description-div {
+    width: 500px;
+    height: 500px;
+  	background-color: #f8f5f2;
+  	color: black;
+  	background-position: 0 0;
+  	padding: 50px 80px;
+    border: 2px solid rgb(92, 92, 92);
+}
+
+.pr-description-text {
+    color: black;
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.pr-description-image {
+    border: 2px solid black;
+    width: 500px;
+    height: 200px;
+}
+
+.pr-description-header {
+    color: rgb(92, 92, 92);
+    font-size: 28px;
+}
+
+.pr-description-download-btn {
+
+    font-size: 20px;
+    background-color: black;
+    color: white;
+    width: 150px;
+    height: 75px;
+}
+
+.select-menu {
+  display: flex;
+  font-size: 20px;
+  height: 50px;
+  width: auto;
+  align-items: center;
+}
+.select-menu-text {
+  color: white;
+  padding-right: 10px;
+}
+.select-menu-text-current {
+  color: gray;
+  padding-right: 10px;
+}
+.select-menu-text:hover {
+  color: gray;
+}

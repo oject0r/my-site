@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>OJector</title>
+    <link rel="stylesheet" href="./main.css">
+
+  </head>
+  <body>
+    <noscript>
+      <p class='header'>Please, enable javascript to continue</p>
+    </noscript>
+    <p class='header'>Вы действительно хотите перейти по ссылке?</p>
+    <p class='sub-header'>Администрация сайта не несёт отвественности за содержание этого сайта</p>
+    <p class='description-header' id='replace'>JS LOAD TEXT</p>
+    <div class='btns'>
+      <a href='https://ojector.ru' class='btn' style='color: green;'>Не переходить</a>
+      <a href='https://ojector.ru' class='btn' style='color: green;' id='hrefLink'>Перейти</a>
+    </div>
+    <script type="text/javascript">
+      var params = window
+          .location
+          .search
+          .replace('?','')
+          .split('&')
+          .reduce(
+              function(p,e){
+                  var a = e.split('=');
+                  p[ decodeURIComponent(a[0])] = decodeURIComponent(a[1]);
+                  return p;
+              },
+              {}
+          );
+
+      console.log(params['link']);
+      let elem = document.getElementById('replace');
+      elem.innerHTML = 'Перейти по ссылке «'+params['link']+'»?'
+      let hrefLink = document.getElementById('hrefLink');
+      hrefLink.href = params['link']
+    </script>
+  </body>
+</html>
